@@ -1,0 +1,30 @@
+@import '../../../../scss/variables';
+
+.logo {
+  display: flex;
+  align-items: center;
+  grid-gap: 8px;
+  max-width: 135px;
+  position: relative;
+  z-index: 2;
+
+  &__svg {
+    width: 25px;
+    height: 24px;
+    fill: $white;
+  }
+
+  &__text {
+    color: $white;
+    font-size: 16px;
+    line-height: 1.2;
+    @media (min-width: 768px) {
+      font-size: 18px;
+    }
+  }
+
+  &:hover &__svg {
+    transform: rotate(365deg);
+    transition: 2s transform ease;
+  }
+}

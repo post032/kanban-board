@@ -1,0 +1,83 @@
+@import '../../../../scss/variables';
+.column {
+  max-width: 290px;
+  min-width: 200px;
+  width: 100%;
+
+  &__svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  &__btn {
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    width: 14px;
+    height: 15px;
+
+  }
+
+  &__title {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.2;
+    color: $dark-gray;
+    display: flex;
+    align-items: flex-start;
+    grid-gap: 8px;
+    margin: 0;
+  }
+
+  &__title &__svg {
+    fill: $mid-blue;
+    min-width: 18px;
+    max-width: 18px;
+    height: 18px;
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  &__edit {
+    display: flex;
+    align-items: center;
+    grid-gap: 12px;
+  }
+
+  &__wrap {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 16px;
+  }
+
+  &__add-btn {
+    width: 32px;
+    height: 32px;
+    padding: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #D0D0D0;
+    border: none;
+    transition: 0.5s background-color ease;
+    border-radius: 4px;
+    margin: 16px auto;
+
+    &:hover {
+      background-color: $light-blue;
+    }
+  }
+
+  &__add-btn-svg {
+    width: 100%;
+    height: 100%;
+    fill: $white;
+  }
+}
+

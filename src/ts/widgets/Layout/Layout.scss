@@ -1,0 +1,13 @@
+.header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 3;
+}
+
+.main__wrapper {
+  position: relative;
+  @media (min-width: 1024px) {
+    display: flex;
+  }
+}

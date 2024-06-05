@@ -1,0 +1,62 @@
+@import '../../../scss/variables';
+
+.page-top {
+  padding: 40px 20px 24px;
+  @media (min-width: 768px) {
+    padding: 40px 40px 24px;
+  }
+
+  &__wrapper {
+    border-bottom: 1px solid #E9E9E9;
+    padding-bottom: 10px;
+    display: grid;
+    grid-gap: 20px;
+    @media (min-width: 768px) {
+      grid-gap: 32px;
+    }
+  }
+
+  &__top, &__bottom {
+    display: flex;
+    grid-gap: 20px;
+    @media (max-width: 767px) {
+      flex-direction: column;
+    }
+    @media (min-width: 768px) {
+      align-items: center;
+    }
+  }
+
+  &__bottom {
+    justify-content: space-between;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    color: $dark-gray;
+    margin: 0;
+  }
+
+  &__svg {
+    fill: $dark-gray;
+    width: 20px;
+    height: 18px;
+  }
+
+  &__name {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.3;
+    color: $dark-gray;
+    margin: 0;
+  }
+
+  &__info {
+    display: flex;
+    align-items: center;
+    grid-gap: 9px;
+  }
+}

@@ -1,0 +1,119 @@
+@import '../../../../scss/variables';
+
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @media (max-width: 768px) {
+    margin-right: 10px;
+  }
+  @media (max-width: 1023px) {
+    margin-left: auto;
+    margin-right: 20px;
+  }
+
+  &__nav {
+    display: none;
+    @media (min-width: 1024px) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      grid-gap: 4%;
+      width: 100%;
+    }
+
+    &._active {
+      @media (max-width: 1023px) {
+        display: flex;
+        flex-direction: column;
+        grid-gap: 10px;
+        background-color: $dark-blue;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding: 80px 20px 20px;
+        width: calc(100% - 40px);
+        height: calc(100% - 100px);
+      }
+    }
+  }
+
+  &__link {
+    color: $gray;
+    padding: 2px;
+    border-top: 2px solid transparent;
+    border-bottom: 2px solid transparent;
+    transition: 0.5s color ease;
+    @media (max-width: 768px) {
+      font-size: 20px;
+    }
+
+    &:hover {
+      color: $white;
+    }
+
+    &._active {
+      color: $white;
+      border-bottom: 2px solid $red;
+    }
+  }
+
+  &__menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0;
+    height: 18px;
+    border: 0 none;
+    margin: 0;
+    outline: none;
+    background: transparent;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+    @media (min-width: 1024px) {
+      display: none;
+    }
+  }
+
+  &__menu-line {
+    position: relative;
+    display: block;
+    width: 24px;
+    height: 2px;
+    background-color: $white;
+    flex-shrink: 0;
+    transform-origin: 1px;
+    transition: transform 0.2s linear 0s,
+    opacity 0.1s linear 0s,
+    background-color 0.2s ease 0s;
+
+    &:nth-child(2) {
+      width: 18px;
+      margin-left: auto;
+    }
+  }
+
+  &__menu._opened &__menu-line {
+    background-color: $white;
+
+    &:first-child {
+      transform: rotate(45deg);
+    }
+
+    &:nth-child(2) {
+      opacity: 0;
+    }
+
+    &:nth-child(3) {
+      transform: rotate(-45deg);
+    }
+  }
+
+  &__svg-menu {
+    width: 16px;
+    height: 10px;
+  }
+}

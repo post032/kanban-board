@@ -1,0 +1,22 @@
+@import '../../../scss/variables';
+
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  grid-gap: 8px;
+  color: $light-gray;
+
+  &__parent {
+    color: $light-gray;
+  }
+
+  &__current {
+    color: $dark-gray;
+  }
+
+  &__svg {
+    fill: $red;
+    width: 20px;
+    height: 20px;
+  }
+}

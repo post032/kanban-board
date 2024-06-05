@@ -1,0 +1,71 @@
+@import '../../../../scss/variables';
+.card {
+  border-radius: 4px;
+  overflow: hidden;
+  cursor: grab;
+  &__wrap {
+    display: grid;
+    grid-template-columns: 64px 1fr;
+    min-height: 118px;
+
+  }
+  &__implementer {
+    background-color: #EFEFEF;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 14px 15px;
+  }
+  &__info {
+    background-color: #F5F5F5;
+    padding: 15px 16px 15px 12px;
+  }
+
+  &__svg {
+    width: 34px;
+    height: 14px;
+  }
+
+  &__name {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 18px;
+    color: $blue;
+    margin: 0;
+  }
+
+  &__hash {
+    color: $dark-gray;
+  }
+
+  &__block-img {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  &__block-img &__img:not(:first-child) {
+    margin-top: -40%;
+  }
+
+  &__img {
+    width: 32px;
+    height: 32px;
+    overflow: hidden;
+    border-radius: 50%;
+  }
+}
+
+.done__column {
+  .card__name {
+    color: rgba(62, 101, 190, 0.5);
+    text-decoration: line-through;
+    text-decoration-color: $dark-gray;
+  }
+
+  .card__hash {
+    color: rgba(61, 64, 68, 0.5);
+  }
+}

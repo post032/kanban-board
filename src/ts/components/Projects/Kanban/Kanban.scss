@@ -1,0 +1,19 @@
+.kanban {
+  padding: 0 0 0 20px;
+  overflow: auto;
+  @media (min-width: 768px) {
+    padding: 0 0 0 40px;
+  }
+
+  &__wrap {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    grid-gap: 20px;
+    padding-right: 40px;
+    @media (min-width: 1024px) {
+      grid-gap: 40px;
+      padding-right: 40px;
+    }
+  }
+}

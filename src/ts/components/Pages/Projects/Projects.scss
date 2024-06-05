@@ -1,0 +1,7 @@
+.projects {
+  width: 100%;
+  @media (min-width: 1024px) {
+    padding-left: 80px;
+    width: calc(100% - 80px);
+  }
+}

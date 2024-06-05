@@ -1,0 +1,128 @@
+@import '../../../scss/variables';
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 64px;
+  height: 100vh;
+  @media (min-width: 1024px) {
+    width: 80px;
+    height: calc(100vh - 80px);
+  }
+
+  &__wrapper {
+    background-color: $dark-blue-sb;
+    display: flex;
+    transform: translateX(-64px);
+    transition: transform 0.2s ease;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    grid-gap: 20px;
+    height: calc(100% - 68px);
+    padding: 48px 0 20px;
+    @media (min-width: 1024px) {
+      transform: translateX(0);
+      height: calc(100% - 70px);
+      padding: 120px 0 30px;
+    }
+
+    &._active {
+      transform: translateX(0);
+    }
+  }
+
+  &__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 18px;
+    height: 18px;
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    @media (min-width: 768px) {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  &__svg {
+    width: 100%;
+    height: 100%;
+    fill: $white;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  &__btn--search {
+    width: 20px;
+    height: 20px;
+    @media (min-width: 768px) {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  &__btn--big {
+    width: 64px;
+    height: 64px;
+    @media (min-width: 1024px) {
+      width: 80px;
+      height: 80px;
+    }
+  }
+
+  &__btn--big &__svg {
+    fill: $dark-blue;
+    stroke: $dark-blue;
+    transition: 0.5s stroke ease;
+
+    &:hover {
+      stroke: $white;
+      transform: scale(1);
+    }
+  }
+
+  &__btn-open {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    width: 20px;
+    height: 40px;
+    @media (min-width: 768px) {
+      width: 30px;
+      height: 60px;
+    }
+    @media (min-width: 1024px) {
+      display: none;
+    }
+  }
+
+  &__svg-open {
+    width: 100%;
+    height: 100%;
+
+    &:hover {
+      stroke: $white;
+    }
+  }
+
+  &__top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-gap: 20px;
+    padding-top: 20px;
+    @media (min-width: 1024px) {
+      padding-top: 0;
+    }
+  }
+}

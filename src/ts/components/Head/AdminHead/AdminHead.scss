@@ -1,0 +1,52 @@
+@import '../../../../scss/variables';
+
+.admin-head {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  max-width: 270px;
+  grid-gap: 10px;
+  position: relative;
+  z-index: 2;
+  @media (min-width: 768px) {
+    grid-gap: 24px;
+    justify-self: flex-end;
+  }
+  @media (min-width: 1360px) {
+    grid-gap: 30px;
+  }
+
+  &__svg {
+    width: 22px;
+    height: 22px;
+    fill: $gray;
+    transition: 0.5s fill ease;
+
+    &._active {
+      fill: $red;
+    }
+  }
+
+  &__price {
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  &__price-text {
+    color: $white;
+    margin: 0;
+
+  }
+
+  &__alert {
+    margin: 0 8px 0 0;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+
+    &:hover .admin-head__svg {
+      fill: $white;
+    }
+  }
+}
