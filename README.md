@@ -30,7 +30,9 @@ https://github.com/post032/kanban-board
 
 ```
 SSH: git clone git@github.com:post032/kanban-board.git
-https: git clone https://github.com/post032/kanban-board.git
+```
+```
+HTTPS: git clone https://github.com/post032/kanban-board.git
 ```
 
 Установите зависимости
