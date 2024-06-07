@@ -59,10 +59,9 @@ const Kanban: FC<KanbanProps> = ({ columns, setColumns }) => {
     <section className='kanban'>
       <DragDropContext onDragEnd={onDragEnd}>
         <div className='kanban__wrap'>
-          {Object.entries(columns).map(([id, item], index) => {
+          {Object.entries(columns).map(([id, item]) => {
             return (
               <Column
-                index={index}
                 key={id}
                 id={id}
                 iconEl={item.icon}
