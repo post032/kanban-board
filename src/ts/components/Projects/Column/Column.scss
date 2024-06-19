@@ -4,6 +4,11 @@
   min-width: 200px;
   width: 100%;
 
+  &__height {
+    height: auto;
+    position: sticky;
+  }
+
   &__svg {
     width: 100%;
     height: 100%;
@@ -42,6 +47,7 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 10px;
+    top: 0;
   }
 
   &__edit {

@@ -28,6 +28,7 @@ const Column = memo<ColumnProps>(({
       {(provided) => {
         return (
           <div key={id}
+               className='column__height'
                {...provided.droppableProps}
                ref={provided.innerRef}
           >
